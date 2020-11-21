@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
     templateUrl: './employee.component.html'
 })
 export class EmployeeComponent{
-    public title = 'Title of employee component';
+    public title = 'Angular Course';
 }
