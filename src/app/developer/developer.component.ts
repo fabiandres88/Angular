@@ -7,14 +7,22 @@ import { Developer } from './developer';
 })
 export class DeveloperComponent {
     public title: string = 'Developer component';
-    public developer:Developer;  
+    public developer:Developer;
+    public coworkers: Array<Developer>;  
     
     constructor(){
-        this.developer = new Developer('Fabian Ramirez', 31, 'Web Full Stack Developer', true);    
+        this.developer = new Developer('Fabian Ramirez', 31, 'Web Full Stack Developer', true);
+        this.coworkers=[
+            new Developer('Carolina Jaimes', 29, '.Commercial Assesor', true),
+            new Developer('German Ramirez', 29, '.NET Full Stack Developer', true),
+            new Developer('Paco Suarez', 21, 'Web Full Stack Developer', true),
+            new Developer('Pepito Perez', 41, 'Web Full Stack Developer', true),
+            new Developer('Juan Gomez', 37, 'Web Full Stack Developer', true),
+        ];
     }
        
-    ngOninit() {
-        console.log(this.developer)
+    ngOnInit() {
+        console.log(this.coworkers)
     }
 }
 
