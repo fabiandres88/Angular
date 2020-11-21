@@ -24,6 +24,18 @@ export class FruitComponent {
         this.helloWorld(this.name);
         this.changeName();
         console.log(this.name);
+
+        //variables and scope
+        var x = 8;
+        var y = 29;
+
+        if (x === 8) {
+            let x = 3;
+            var y = 31;
+
+            console.log(`Within it: ${x} ${y}`);
+        }
+        console.log(`Outside it: ${x} ${y}`);
     }
 
     helloWorld(name: string) {
