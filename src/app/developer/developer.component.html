@@ -3,6 +3,7 @@
 Star Developer
 <br />
 <br />
+<!--Using ngIf directive-->
 <div *ngIf="outterWorker == false">
     <button (click)="changeOutter(true)">Show coworker</button>
     <ul>
@@ -13,6 +14,7 @@ Star Developer
 </div>
 
 <div *ngIf="outterWorker == true">
+<!--Using click event-->
     <button (click)="changeOutter(false)">Show developer</button>
     <ul>
         <li>{{coworkers[0].name}}</li>
@@ -23,6 +25,7 @@ Star Developer
 
 <h3>coworkers list</h3>
 <ul>
+<!--Using ngFor directive-->
     <li *ngFor="let coworker of coworkers; let i = index">
         <strong>Coworker {{i+1}}:</strong> 
         <ul>
@@ -33,4 +36,13 @@ Star Developer
             <li *ngIf="coworker.hired == false">Is not Hired</li>
         </ul>
     </li>
+</ul>
+
+<!--Using ngSwitch and ngStyle directives-->
+
+<h3>Colors switch</h3>
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'red'" [ngStyle]="{'color':color}">It is of RED color</li>
+    <li *ngSwitchCase="'blue'" [ngStyle]="{'color':color}">It is of BLUE color</li>
+    <li *ngSwitchCase="'green'" [ngStyle]="{'color':color}">It is of GREEN color</li>
 </ul>

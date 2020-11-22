@@ -9,7 +9,8 @@ export class DeveloperComponent {
     public title: string = 'Developer component';
     public developer:Developer;
     public coworkers: Array<Developer>;
-    public outterWorker:boolean; 
+    public outterWorker:boolean;
+    public color:string; 
     
     constructor(){
         this.developer = new Developer('Fabian Ramirez', 31, 'Web Full Stack Developer', true);
@@ -21,6 +22,7 @@ export class DeveloperComponent {
             new Developer('Juan Gomez', 37, 'Web Full Stack Developer', false),
         ];
         this.outterWorker = true;
+        this.color = 'blue';
     }
        
     ngOnInit() {
