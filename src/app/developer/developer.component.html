@@ -11,7 +11,7 @@ Star Developer
         <li>{{developer.roll}}</li>
     </ul>
 </div>
-<hr>
+
 <div *ngIf="outterWorker == true">
     <button (click)="changeOutter(false)">Show developer</button>
     <ul>
@@ -20,3 +20,17 @@ Star Developer
         <li>{{coworkers[0].roll}}</li>
     </ul>
 </div>
+
+<h3>coworkers list</h3>
+<ul>
+    <li *ngFor="let coworker of coworkers; let i = index">
+        <strong>Coworker {{i+1}}:</strong> 
+        <ul>
+            <li>{{coworker.name}}</li>
+            <li>{{coworker.age}}</li>
+            <li>{{coworker.roll}}</li>
+            <li *ngIf="coworker.hired == true">Is Hired</li>
+            <li *ngIf="coworker.hired == false">Is not Hired</li>
+        </ul>
+    </li>
+</ul>
