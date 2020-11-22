@@ -53,7 +53,8 @@ Star Developer
 <br>
 <br>
 
-<pre [style.border]="colorSelected == 'red' ? '5px solid black' : '2px solid gold'">
+<pre [style.border]="colorSelected == 'red' ? '5px solid black' : '2px solid gold'"
+    [class.backgroundBeige]="colorSelected == 'blue'">
     <strong>Color selected:</strong>
     {{colorSelected}}
 </pre>
