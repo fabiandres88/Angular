@@ -1,14 +1,22 @@
 <h2>{{title}}</h2>
 
 Star Developer
-<ul>
-    <li>
-        {{developer.name}}       
-    </li>
-    <li>
-        {{developer.age}}
-    </li>
-    <li>
-        {{developer.roll}}
-    </li>    
-</ul>
+<br />
+<br />
+<div *ngIf="outterWorker == false">
+    <button (click)="changeOutter(true)">Show coworker</button>
+    <ul>
+        <li>{{developer.name}}</li>
+        <li>{{developer.age}}</li>
+        <li>{{developer.roll}}</li>
+    </ul>
+</div>
+<hr>
+<div *ngIf="outterWorker == true">
+    <button (click)="changeOutter(false)">Show developer</button>
+    <ul>
+        <li>{{coworkers[0].name}}</li>
+        <li>{{coworkers[0].age}}</li>
+        <li>{{coworkers[0].roll}}</li>
+    </ul>
+</div>
