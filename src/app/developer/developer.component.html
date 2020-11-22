@@ -14,7 +14,7 @@ Star Developer
 </div>
 
 <div *ngIf="outterWorker == true">
-<!--Using click event-->
+    <!--Using click event-->
     <button (click)="changeOutter(false)">Show developer</button>
     <ul>
         <li>{{coworkers[0].name}}</li>
@@ -25,9 +25,9 @@ Star Developer
 
 <h3>coworkers list</h3>
 <ul>
-<!--Using ngFor directive-->
+    <!--Using ngFor directive-->
     <li *ngFor="let coworker of coworkers; let i = index">
-        <strong>Coworker {{i+1}}:</strong> 
+        <strong>Coworker {{i+1}}:</strong>
         <ul>
             <li>{{coworker.name}}</li>
             <li>{{coworker.age}}</li>
@@ -46,3 +46,13 @@ Star Developer
     <li *ngSwitchCase="'blue'" [ngStyle]="{'color':color}">It is of BLUE color</li>
     <li *ngSwitchCase="'green'" [ngStyle]="{'color':color}">It is of GREEN color</li>
 </ul>
+
+<!--Using two data binding-->>
+<h3>Colors selector</h3>
+<input type="text" [(ngModel)]="colorSelected" />
+<br>
+<br>
+<strong>Color selected:</strong>
+<pre>{{colorSelected}}</pre>
+<div [ngStyle]="{'background':colorSelected,'width':'200px','height':'200px'}">
+</div>

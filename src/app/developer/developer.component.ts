@@ -10,7 +10,8 @@ export class DeveloperComponent {
     public developer:Developer;
     public coworkers: Array<Developer>;
     public outterWorker:boolean;
-    public color:string; 
+    public color:string;
+    public colorSelected:string;
     
     constructor(){
         this.developer = new Developer('Fabian Ramirez', 31, 'Web Full Stack Developer', true);
@@ -23,6 +24,7 @@ export class DeveloperComponent {
         ];
         this.outterWorker = true;
         this.color = 'blue';
+        this.colorSelected = '#ccc'
     }
        
     ngOnInit() {
