@@ -52,7 +52,10 @@ Star Developer
 <input type="text" [(ngModel)]="colorSelected" />
 <br>
 <br>
-<strong>Color selected:</strong>
-<pre>{{colorSelected}}</pre>
+
+<pre [style.border]="colorSelected == 'red' ? '5px solid black' : '2px solid gold'">
+    <strong>Color selected:</strong>
+    {{colorSelected}}
+</pre>
 <div [ngStyle]="{'background':colorSelected,'width':'200px','height':'200px'}">
 </div>
