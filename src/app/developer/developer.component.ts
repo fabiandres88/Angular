@@ -24,7 +24,7 @@ export class DeveloperComponent {
         ];
         this.outterWorker = true;
         this.color = 'blue';
-        this.colorSelected = '#ccc'
+        this.colorSelected = '#ccc';
     }
        
     ngOnInit() {

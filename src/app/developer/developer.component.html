@@ -47,14 +47,17 @@ Star Developer
     <li *ngSwitchCase="'green'" [ngStyle]="{'color':color}">It is of GREEN color</li>
 </ul>
 
-<!--Using two data binding-->>
+<!--Using two data binding-->
 <h3>Colors selector</h3>
 <input type="text" [(ngModel)]="colorSelected" />
 <br>
 <br>
 
 <pre [style.border]="colorSelected == 'red' ? '5px solid black' : '2px solid gold'"
-    [class.backgroundBeige]="colorSelected == 'blue'">
+    [ngClass]="{
+        backgroundBeige: colorSelected == 'blue',
+        backgroundLightBlue: colorSelected == 'green'
+    }">
     <strong>Color selected:</strong>
     {{colorSelected}}
 </pre>
