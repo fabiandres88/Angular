@@ -21,4 +21,8 @@ export class ContactComponent {
             console.log(this.parameter);
         });
     }
+
+    redirect(){
+        this._router.navigate(['/contact','fabianramirez']);    
+    }
 }

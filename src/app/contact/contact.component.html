@@ -1,4 +1,8 @@
 <h3>{{title}}</h3>
 <div *ngIf="parameter">
     URL parameter: {{parameter}}
-</div> 
+</div>
+
+<div *ngIf="!parameter">
+    <button (click)="redirect()">Back to the page with parameter</button>
+</div>
