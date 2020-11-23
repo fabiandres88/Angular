@@ -8,13 +8,21 @@ import { ClothesService } from '../services/clothes.service';
 }) 
 export class HomeComponent {
     public title = 'Main page';
+    public listClothes!: Array<string>;
+    public newClothe!:string;
 
     constructor(
-        private _clothesService: ClothesService
+        private _clothesService: ClothesService        
     ){}
 
     ngOnInit(){
-        console.log(this._clothesService.test('Nike T-Shirt'));
+        this.listClothes= this._clothesService.getClothe();        
+        console.log(this._clothesService.test('Nike T-Shirt'));        
+    }
+
+    addClothe(){
+        this._clothesService.addClothe(this.newClothe);
+        this.newClothe= "";
     }
 }
 
