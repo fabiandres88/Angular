@@ -5,4 +5,9 @@
 .backgroundLightBlue {
   background-color: lightblue;
 }
+
+.linkActive {
+  font-weight: bolder;
+  font-style: italic;
+}
 /*# sourceMappingURL=styles.css.map */

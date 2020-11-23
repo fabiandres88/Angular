@@ -11,6 +11,7 @@ const appRoutes = [
     {path: '', component: HomeComponent},
     {path: 'home', component: HomeComponent},
     {path: 'contact', component: ContactComponent},
+    {path: 'contact/:page', component: ContactComponent},
     {path: 'developer', component: DeveloperComponent},
     {path: 'fruit', component: FruitComponent},
     {path: 'fruit', component: FruitComponent},
