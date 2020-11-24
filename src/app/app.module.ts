@@ -9,6 +9,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { DeveloperComponent } from './developer/developer.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { ConversorPipe } from './pipes/conversor.pipe';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ContactComponent } from './contact/contact.component';
     EmployeeComponent,
     DeveloperComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    ConversorPipe
   ],
   imports: [
     BrowserModule,
