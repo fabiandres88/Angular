@@ -6,6 +6,7 @@ import { DeveloperComponent } from './developer/developer.component';
 import { FruitComponent } from './fruit/fruit.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { CarsComponent } from './cars/cars.component';
 
 const appRoutes = [
     {path: '', component: HomeComponent},
@@ -15,6 +16,7 @@ const appRoutes = [
     {path: 'developer', component: DeveloperComponent},
     {path: 'fruit', component: FruitComponent},
     {path: 'fruit', component: FruitComponent},
+    {path: 'cars', component: CarsComponent},
     {path: '**', component: HomeComponent} //Path when page loading fail
 ];
 

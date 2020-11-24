@@ -10,6 +10,7 @@ import { DeveloperComponent } from './developer/developer.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { ConversorPipe } from './pipes/conversor.pipe';
+import { CarsComponent } from './cars/cars.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ConversorPipe } from './pipes/conversor.pipe';
     DeveloperComponent,
     HomeComponent,
     ContactComponent,
-    ConversorPipe
+    ConversorPipe,
+    CarsComponent
   ],
   imports: [
     BrowserModule,

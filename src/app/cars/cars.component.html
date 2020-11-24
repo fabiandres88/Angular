@@ -1,0 +1,13 @@
+<h1>Cars Component</h1>
+
+<form #formCar="ngForm" (ngSubmit)="onSubmit()">
+    <label>Name: </label> <br>
+    <input type="text" name="name" #name="ngModel" [(ngModel)]="car.name" required> <br>
+    <label>Mark: </label> <br>
+    <input type="text" name="mark" #mark="ngModel" [(ngModel)]="car.mark" required> <br>
+    <label>Model: </label> <br>
+    <input type="text" name="ageModel" #ageModel="ngModel" [(ngModel)]="car.ageModel" required> <br>
+    <label>Engine: </label> <br>
+    <input type="text" name="engine" #engine="ngModel" [(ngModel)]="car.engine" required> <br><br>
+    <input type="submit" value="save"> 
+</form>
