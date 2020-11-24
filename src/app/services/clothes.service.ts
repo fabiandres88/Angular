@@ -18,4 +18,8 @@ export class ClothesService{
     getClothe(){
         return this.setClothes;
     }
+
+    deleteClothe(index:number){
+        this.setClothes.splice(index,1);
+    }
 }

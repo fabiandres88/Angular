@@ -24,6 +24,10 @@ export class HomeComponent {
         this._clothesService.addClothe(this.newClothe);
         this.newClothe= "";
     }
+
+    removeClothe(index:number){
+        this._clothesService.deleteClothe(index);
+    }
 }
 
 

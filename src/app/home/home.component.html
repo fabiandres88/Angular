@@ -2,9 +2,10 @@
 
 <input type="text" [(ngModel)]="newClothe">
 <button (click)="addClothe()">Add clothe</button>
+
 <h3>Clothes List</h3>
 <ul>
-    <li *ngFor="let clothe of listClothes">
-        {{clothe}}
+    <li *ngFor="let clothe of listClothes; let i=index" >
+        {{clothe}}<button (click)="removeClothe(i)">Remove clothe</button>
     </li>
 </ul>
