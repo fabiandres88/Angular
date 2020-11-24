@@ -11,9 +11,13 @@ export class HomeComponent {
     public listClothes!: Array<string>;
     public newClothe!:string;
 
+    public date:any;
+
     constructor(
         private _clothesService: ClothesService        
-    ){}
+    ){
+        this.date = new Date();
+    }
 
     ngOnInit(){
         this.listClothes= this._clothesService.getClothe();        

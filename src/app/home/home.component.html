@@ -1,4 +1,4 @@
-<h3>{{title}}</h3>
+<h3>{{title | uppercase}}</h3>
 
 <input type="text" [(ngModel)]="newClothe">
 <button (click)="addClothe()">Add clothe</button>
@@ -6,6 +6,8 @@
 <h3>Clothes List</h3>
 <ul>
     <li *ngFor="let clothe of listClothes; let i=index" >
-        {{clothe}}<button (click)="removeClothe(i)">Remove clothe</button>
+        {{clothe | lowercase}}<button (click)="removeClothe(i)">Remove clothe</button>
     </li>
 </ul>
+
+{{date| date:'dd-MM-YYYY'}}
