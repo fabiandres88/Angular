@@ -5,7 +5,7 @@
     <input type="text" name="name" #name="ngModel" [(ngModel)]="car.name" required> <br>
     <div *ngIf="name.touched && !name.valid">Name car invalid.</div>
     <label>Mark: </label> <br>
-    <input type="text" name="mark" #mark="ngModel" [(ngModel)]="car.mark" required pattern="[a-zA-Z#]"> <br>
+    <input type="text" name="mark" #mark="ngModel" [(ngModel)]="car.mark" required pattern="[a-zA-Z#]+"> <br>
     <div *ngIf="mark.touched && !mark.valid">Mark car invalid.</div>
     <label>Model: </label> <br>
     <input type="text" name="ageModel" #ageModel="ngModel" [(ngModel)]="car.ageModel" required pattern="[0-9]+"> <br>
