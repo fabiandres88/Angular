@@ -13,5 +13,12 @@
     <label>Engine: </label> <br>
     <input type="text" name="engine" #engine="ngModel" [(ngModel)]="car.engine" required pattern="[0-9]+"> <br><br>
     <div *ngIf="engine.touched && !engine.valid">Engine car invalid.</div>
-    <input type="submit" value="save"> 
+    <input type="submit" value="save">
 </form>
+
+<div>
+    <h4>Cars list</h4>
+    <ul>
+        <li *ngFor="let car of cars">{{car.name}} <br> {{car.mark}} <br>{{car.ageModel}}</li>        
+    </ul>
+</div>

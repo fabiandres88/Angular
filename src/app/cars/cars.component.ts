@@ -7,9 +7,14 @@ import { Car } from './car';
 })
 export class CarsComponent{
     public car:Car
+    public cars:Array<Car>
 
     constructor(){
         this.car = new Car("","","","");
+        this.cars = [
+            new Car("Sandero","Renault","2020","1200"),
+            new Car("Mustang","Ford","2020","1800")    
+        ]
     }
 
     onSubmit(){        
