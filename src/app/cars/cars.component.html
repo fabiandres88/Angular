@@ -3,11 +3,15 @@
 <form #formCar="ngForm" (ngSubmit)="onSubmit()">
     <label>Name: </label> <br>
     <input type="text" name="name" #name="ngModel" [(ngModel)]="car.name" required> <br>
+    <div *ngIf="name.touched && !name.valid">Name car invalid.</div>
     <label>Mark: </label> <br>
-    <input type="text" name="mark" #mark="ngModel" [(ngModel)]="car.mark" required> <br>
+    <input type="text" name="mark" #mark="ngModel" [(ngModel)]="car.mark" required pattern="[a-zA-Z#]"> <br>
+    <div *ngIf="mark.touched && !mark.valid">Mark car invalid.</div>
     <label>Model: </label> <br>
-    <input type="text" name="ageModel" #ageModel="ngModel" [(ngModel)]="car.ageModel" required> <br>
+    <input type="text" name="ageModel" #ageModel="ngModel" [(ngModel)]="car.ageModel" required pattern="[0-9]+"> <br>
+    <div *ngIf="ageModel.touched && !ageModel.valid">Model car invalid.</div>
     <label>Engine: </label> <br>
-    <input type="text" name="engine" #engine="ngModel" [(ngModel)]="car.engine" required> <br><br>
+    <input type="text" name="engine" #engine="ngModel" [(ngModel)]="car.engine" required pattern="[0-9]+"> <br><br>
+    <div *ngIf="engine.touched && !engine.valid">Engine car invalid.</div>
     <input type="submit" value="save"> 
 </form>
